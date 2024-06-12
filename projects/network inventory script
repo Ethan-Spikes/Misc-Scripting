@@ -3,7 +3,10 @@
 #initiate TCP dump and create a product that future functions can use
 
 
-#initiate nmap and do a subnet scan. then grab discovered hosts and add to 'hosts on network' document.
+#initiate nmap and do a subnet scan with a greppable output for awk
+
+
+#then grab discovered hosts and add to 'hosts on network' document.
 
 
 #take tcp dump product and find devices responding to broadcasts. add to 'hosts on network' document. Ensure that there aren't repeating hosts on network.
