@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#initiate TCP dump and create a product that future functions can use
+
+
+#initiate nmap and do a subnet scan. then grab discovered hosts and add to 'hosts on network' document.
+
+
+#take tcp dump product and find devices responding to broadcasts. add to 'hosts on network' document. Ensure that there aren't repeating hosts on network.
+
+
+#take tcp dump product and find devices creating broadcasts. add to 'hosts on network' document. Ensure that there aren't repeating hosts on network.
+
+
+#compare 'hosts on network' document to 'host whitelist' document. Generate an alert if something is on there that shouldn't be.
+
+
+#initiate nmap and use 'hosts on network' document to scan the hosts for open ports, service versions, and vulnerabilities. Add this scan to a product called 'port scan <host_name>'.
+
+
+#all documents should be located in the same directory.
+#no records should be very big.
+#this should run automatically at the top of every hour.
