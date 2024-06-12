@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#update all tools used
+#nmap, searchsploit
+
+#scan for neighboring devices in 192.168.1.0/24 subnet
+
+sudo nmap -sn -PE 192.168.1.0/24 -oG nmap.txt 
+
+
+#grab targets
+cat nmap.txt | awk '/Host/ {print $2}' | tr '\n' ' ' > targets.txt
+
+echo "targets acquired:
+"
+cat targets.txt | tr ' ' '\n'
+
+#scan devices for open ports
+sudo nmap -p- -Pn -T4 $(cat targets.txt) -oG nmap_ports.txt
+
+echo "open ports identified:
+"
+
+
+#scan open ports for services and versions
+
+
+
+#scan services and versions for vulnerabilities, create a report

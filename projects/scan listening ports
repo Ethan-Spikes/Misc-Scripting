@@ -1,0 +1,7 @@
+#!/bin/bash
+#grab and format listening ports
+sudo netstat -alnp | awk '/LISTENING/ {print $8}' | tr '\n' ',' > ports.txt
+#plug listening ports into nmap
+sudo nmap -p $(cat ports.txt) 127.0.0.1
+#remove unwanted artifact
+sudo rm ports.txt
